@@ -1,0 +1,117 @@
+@mixin prim {
+    background-color: rgb(233, 99, 10);
+            text-transform: uppercase;
+            font-size: large;
+            color: white;
+            text-align: center;
+}
+
+body{
+
+    background-color: darkgray;
+}
+/* ----- global ----- */
+#card {
+    
+    width: 350px;
+    height: 500px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/* -----header -----*/
+
+.header {
+    width: 350px;
+    height: 210px;
+    background: url(img/paysage.jpg);
+    background-size: 350px 210px;
+    transition: all .4s ease-in-out;
+        .month-date{
+            background-color: rgb(233, 99, 10);
+            text-transform: uppercase;
+            color: white;
+            text-align: center;
+            float: right;
+            padding: 12px 15px;
+            border-radius: 50%;
+            line-height: 20px;
+            font-weight: bold;
+            margin:  10px 10px 0 0;
+
+        }
+        .date {
+            font-size: 18px;
+        }
+        .month {
+            font-size: 18px;
+        }
+    }
+
+    .body-cat{
+        @include prim;
+        position: absolute;
+        left: 0;
+        top: 180px;
+        padding:  10px 10px;
+        line-height: 15px;
+    }
+    
+
+    /*--- hover ---*/
+#card:hover{ 
+    .header{
+        background-size: 380px 240px;
+        background-position: -20px -20px;
+    }
+    .mask-header{
+        background-color: rgba(58, 56, 56, 0.5) ;
+    }
+    .body-visible{
+        margin-top: -150px;
+    }
+    .hover-part{
+        opacity: 1;
+        transition: all .4s ease-in-out;
+    }
+
+
+} 
+
+
+
+.mask-header {
+    transition: all .4s ease-in-out;
+    height: 100% ;
+    
+}
+
+
+
+
+/* ----- body ------*/
+
+.body-card {
+    background-color: white;
+    padding: 26px;
+    
+}
+
+.body-visble {
+    position: absolute;
+    left: 0;
+    padding: 26px;
+    background-color: #FFF;
+    transition: all .3s ease-in-out;
+
+}
+
+
+
+.hover-part{
+    
+    
+}
+
